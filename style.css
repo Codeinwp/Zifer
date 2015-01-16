@@ -1,14 +1,14 @@
 /*
- Theme Name:	 Zifer
- Theme URI:		 http://9pixels.co
- Description:	Zifer - Zerif child theme
- Author:		 9pizels
+ Theme Name:	 Zifer Child
+ Theme URI:		 https://themeisle.com
+ Description:	 Zifer Child - Zerif child theme
+ Author:		 9pixels
  Author URI:	 http://9pixels.co
- Template:		 zerif-lite
+ Template:		 zerif-litess
  Version:		 1.0.0
  Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready
- Text Domain:	zerif-lite
- Domain Path: /languages/
+ Text Domain:	zifer-child
+ Domain Path:  /languages/
 */
 
 @import url("../zerif-lite/style.css");
@@ -89,8 +89,6 @@ section.big-title .buttons{
 
 section.big-title .buttons .btn:first-child{
 	margin-left: 0px;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
 	border-radius: 12px;
 	border-bottom: 4px solid #1b90c2;
 	padding: 8px 24px;
@@ -151,19 +149,16 @@ section.about{
 	position: absolute;
 	top: -50%;
 	left: -50%;
-	max-width: 100%;
 	width:100%;
 	height: auto;
 	bottom: -50%;
 	right: -50%;
 	margin: auto;
-		
+	max-width: initial;
 }
 
 .categ-block img.landscape {
-	max-width: none;
 	width:auto;
-	max-height: 100%;
 	height:100%;
 }
 

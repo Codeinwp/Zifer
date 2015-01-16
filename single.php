@@ -2,20 +2,19 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package zerif
+ * @package Zifer Child
  */
 get_header(); ?>
 <div class="clear"></div>
 </header> <!-- / END HOME SECTION  -->
 <?php $zerif_bigtitle_background = get_theme_mod('zerif_bigtitle_background',"none");
-		echo '
-		<style type="text/css">
-			.site-content .single-header-title{
-				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_bigtitle_background.'\',sizingMethod=\'scale\');
-				background-image: url("'.$zerif_bigtitle_background.'");
-				
-			}
-		</style>';
+echo '
+<style type="text/css">
+	.site-content .single-header-title{
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_bigtitle_background.'\',sizingMethod=\'scale\');
+		background-image: url("'.$zerif_bigtitle_background.'");
+	}
+</style>';
 ?>
 <div id="content" class="site-content">
 	<div class="single-header-title">

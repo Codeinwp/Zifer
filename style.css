@@ -21,7 +21,7 @@ body, h1, h2, h3, h4, h5, h6, .comment-reply-link, .newsletter h3 {
 
 #main-nav {
 	position: relative !important;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 #main-nav.fixed {
@@ -38,8 +38,8 @@ body, h1, h2, h3, h4, h5, h6, .comment-reply-link, .newsletter h3 {
 }
 
 .navbar-inverse .navbar-nav > li {
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 }
 
 .navbar-inverse .navbar-nav > li > a{
@@ -62,7 +62,7 @@ section.big-title{
 	background-position: center top;
 	text-align:left;
 	min-height: 300px;
-	margin-top: 0px;
+	margin-top: 0;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover; 
@@ -88,7 +88,7 @@ section.big-title .buttons{
 }
 
 section.big-title .buttons .btn:first-child{
-	margin-left: 0px;
+	margin-left: 0;
 	border-radius: 12px;
 	border-bottom: 4px solid #1b90c2;
 	padding: 8px 24px;
@@ -101,7 +101,7 @@ section.big-title .buttons .btn:first-child{
 }
 
 .section-header h2{
-	padding-bottom: 0px;
+	padding-bottom: 0;
 	border-left: 2px solid #3ab0e2;
 	font-size: 16px;
 	font-weight: bold;
@@ -125,7 +125,7 @@ section.about{
 	height: 0;
 	padding: 22% 0 0 0;
 	overflow: hidden;
-	margin: 0px;
+	margin: 0;
 	display: inline-block;
 	vertical-align: top;
 	-moz-box-sizing: border-box;
@@ -142,7 +142,7 @@ section.about{
 }
 
 .cat-block-5, .cat-block-3{
-	margin-right: 0px
+	margin-right: 0;
 }
 
 .categ-block img{
@@ -180,7 +180,6 @@ section.custom-category .section-content{
 	transition: visibility 0s 0.5s, opacity 0.5s linear;
 	display:table;
 	height:100%;
-	
 }
 
 .cat-hover span{
@@ -283,7 +282,7 @@ section.latest-news{
 	-moz-background-size: cover;
 	-o-background-size: cover; 
 	background-size: cover;
-	padding: 20px 0px;
+	padding: 20px 0;
 }
 
 article .entry-meta a,article .entry-meta i.fa {
@@ -311,9 +310,9 @@ article .entry-meta {
 }
 
 .widget .widget-title:before {
-	width:0px;
+	width:0;
 }
 
 .entry-title:before{
-	width:0px;
+	width:0;
 }

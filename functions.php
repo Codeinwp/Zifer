@@ -15,7 +15,7 @@ function zifer_theme_setup(){
 	// Translations can be filed in the /languages/ directory.
 	// uncomment to enable (remove the // before load_theme_textdomain )
 	load_theme_textdomain( 'zifer-child', get_stylesheet_directory() . '/languages' );
-	
+
 }
 add_action( 'after_setup_theme', 'zifer_theme_setup' );
 
@@ -23,7 +23,7 @@ add_action( 'after_setup_theme', 'zifer_theme_setup' );
  * Register our scripts (js/css)
  */
 add_action( 'wp_enqueue_scripts', 'zifer_enqueue_scripts',999 );
-function zifer_enqueue_scripts(){ 
+function zifer_enqueue_scripts(){
 
 	// Uncomment the line below and add a
 	// scripts.js file to your child theme
@@ -65,14 +65,14 @@ function zifer_disable_from_parent(){
 
 /**
  * Disable customizer fields from parent
- */ 
+ */
 
 add_action( 'customize_register', 'zifer_customize_register',50 );
 
 function zifer_customize_register( $wp_customize ){
 
 /**
-* Remove all what is not required 
+* Remove all what is not required
 */
 
 	/*************** ORDER *****************************/
@@ -92,7 +92,7 @@ function zifer_customize_register( $wp_customize ){
 
 	/*************  OUR FOCUS SECTION ******************/
 	$wp_customize->remove_section( 'zerif_ourfocus_section');
-		/* show/hide */	
+		/* show/hide */
 	$wp_customize->remove_setting( 'zerif_ourfocus_show');
 	$wp_customize->remove_control( 'zerif_ourfocus_show');
 		/* our focus title */
@@ -109,37 +109,37 @@ function zifer_customize_register( $wp_customize ){
 	$wp_customize->remove_control( 'zerif_aboutus_show');
 		/* title */
 	$wp_customize->remove_setting( 'zerif_aboutus_title');
-	$wp_customize->remove_control( 'zerif_aboutus_title');	
+	$wp_customize->remove_control( 'zerif_aboutus_title');
 		/* big left title */
 	$wp_customize->remove_setting( 'zerif_aboutus_subtitle');
-	$wp_customize->remove_control( 'zerif_aboutus_subtitle');	
+	$wp_customize->remove_control( 'zerif_aboutus_subtitle');
 		/* subtitle */
 	$wp_customize->remove_setting( 'zerif_aboutus_biglefttitle');
-	$wp_customize->remove_control( 'zerif_aboutus_biglefttitle');	
+	$wp_customize->remove_control( 'zerif_aboutus_biglefttitle');
 		/* text */
 	$wp_customize->remove_setting( 'zerif_aboutus_text');
-	$wp_customize->remove_control( 'zerif_aboutus_text');	
+	$wp_customize->remove_control( 'zerif_aboutus_text');
 		/* feature no#1 */
 	$wp_customize->remove_setting( 'zerif_aboutus_feature1_title');
 	$wp_customize->remove_control( 'zerif_aboutus_feature1_title');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature1_text');
 	$wp_customize->remove_control( 'zerif_aboutus_feature1_text');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature1_nr');
-	$wp_customize->remove_control( 'zerif_aboutus_feature1_nr');	
+	$wp_customize->remove_control( 'zerif_aboutus_feature1_nr');
 		/* feature no#2 */
 	$wp_customize->remove_setting( 'zerif_aboutus_feature2_title');
 	$wp_customize->remove_control( 'zerif_aboutus_feature2_title');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature2_text');
 	$wp_customize->remove_control( 'zerif_aboutus_feature2_text');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature2_nr');
-	$wp_customize->remove_control( 'zerif_aboutus_feature2_nr');			
+	$wp_customize->remove_control( 'zerif_aboutus_feature2_nr');
 		/* feature no#3 */
 	$wp_customize->remove_setting( 'zerif_aboutus_feature3_title');
 	$wp_customize->remove_control( 'zerif_aboutus_feature3_title');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature3_text');
 	$wp_customize->remove_control( 'zerif_aboutus_feature3_text');
 	$wp_customize->remove_setting( 'zerif_aboutus_feature3_nr');
-	$wp_customize->remove_control( 'zerif_aboutus_feature3_nr');		
+	$wp_customize->remove_control( 'zerif_aboutus_feature3_nr');
 		/* feature no#4 */
 	$wp_customize->remove_setting( 'zerif_aboutus_feature4_title');
 	$wp_customize->remove_control( 'zerif_aboutus_feature4_title');
@@ -148,14 +148,14 @@ function zifer_customize_register( $wp_customize ){
 	$wp_customize->remove_setting( 'zerif_aboutus_feature4_nr');
 	$wp_customize->remove_control( 'zerif_aboutus_feature4_nr');
 
-	/*************  OUR TEAM SECTION ******************/	
+	/*************  OUR TEAM SECTION ******************/
 	$wp_customize->remove_section( 'zerif_ourteam_section');
-		/* our team show/hide */	
+		/* our team show/hide */
 	$wp_customize->remove_setting( 'zerif_ourteam_show');
 	$wp_customize->remove_control( 'zerif_ourteam_show');
 		/* our team title */
 	$wp_customize->remove_setting( 'zerif_ourteam_title');
-	$wp_customize->remove_control( 'zerif_ourteam_title');	
+	$wp_customize->remove_control( 'zerif_ourteam_title');
 		/* our team subtitle */
 	$wp_customize->remove_setting( 'zerif_ourteam_subtitle');
 	$wp_customize->remove_control( 'zerif_ourteam_subtitle');
@@ -168,7 +168,7 @@ function zifer_customize_register( $wp_customize ){
 	/* testimonials title */
 	$wp_customize->remove_setting( 'zerif_testimonials_title');
 	$wp_customize->remove_control( 'zerif_testimonials_title');
-	/* testimonials subtitle */	
+	/* testimonials subtitle */
 	$wp_customize->remove_setting( 'zerif_testimonials_subtitle');
 	$wp_customize->remove_control( 'zerif_testimonials_subtitle');
 
@@ -212,7 +212,7 @@ function zifer_customize_register( $wp_customize ){
 	/* contactus button label */
 	$wp_customize->remove_setting( 'zerif_contactus_button_label');
 	$wp_customize->remove_control( 'zerif_contactus_button_label');
-	
+
 	/* Google maps section */
 	$wp_customize->remove_section( 'zerif_googlemap_section');
 	$wp_customize->remove_setting( 'zerif_googlemap_section');
@@ -222,9 +222,9 @@ function zifer_customize_register( $wp_customize ){
 	$wp_customize->remove_section( 'zerif_pricing_section');
 	$wp_customize->remove_setting( 'zerif_pricing_section');
 	$wp_customize->remove_control( 'zerif_pricing_section');
-	
+
 /**
- *   Add new fields 
+ *   Add new fields
  */
 
 	/* Background to Latest News	*/
@@ -333,7 +333,7 @@ function zifer_customize_register( $wp_customize ){
 	));
 	/* category select */
 	class Zerif_Category_Dropdown_Control extends WP_Customize_Control {
-		
+
 		private $cats = false;
 
 		public function __construct($manager, $id, $args = array(), $options = array())
@@ -366,7 +366,7 @@ function zifer_customize_register( $wp_customize ){
 			}
 		}
 	}
-	
+
 	$wp_customize->add_setting( 'zerif_customcategory_select' );
 	$wp_customize->add_control( new Zerif_Category_Dropdown_Control( $wp_customize, 'zerif_customcategory_select', array(
 		'label'   => __( 'Category', 'zifer-child' ),
@@ -401,7 +401,7 @@ function do_include($file){
 	$child = get_stylesheet_directory() . '/'.$file;
 	if(file_exists($child))
 		include($child);
-	else 
+	else
 		include($parent);
 }
 
@@ -410,8 +410,8 @@ function do_include($file){
  *
  * @param int $charlength the characters length to be returned or displayed
  * @param string $more the excerpt that shoud apear . ex: "[...]" or "Read more"
- * @param boolean $more_link the excerpt to be link or not  
- * @param boolean $print to print (true) or to return the output (false) 
+ * @param boolean $more_link the excerpt to be link or not
+ * @param boolean $print to print (true) or to return the output (false)
  *
  * @return string the new excerpt if $print=false.
  */
@@ -419,7 +419,7 @@ function custom_the_excerpt($charlength, $more='[...]', $more_link=true, $print=
 	$excerpt = get_the_excerpt();
 	$charlength++;
 	$out='<p class="excerpt-content">';
-	
+
 	if ( mb_strlen( $excerpt ) > $charlength ) {
 		$subex = mb_substr( $excerpt, 0, $charlength - mb_strlen($more) );
 		$exwords = explode( ' ', $subex );
@@ -431,22 +431,22 @@ function custom_the_excerpt($charlength, $more='[...]', $more_link=true, $print=
 		}
 
 		if($more_link){
-			$out.= '</p><a class="read-more" href="'.get_permalink().'">'.$more.'</a>';	
+			$out.= '</p><a class="read-more" href="'.get_permalink().'">'.$more.'</a>';
 		}
 		else $out.= $more.'</p>';
-	} 
+	}
 	else {
 		$out.= $excerpt.'</p>';
 	}
-	if($print)  
+	if($print)
 		echo $out;
-	else 
+	else
 		return $out;
 }
 /**
- * customize function "zerif_posted_on()" from parent 
+ * customize function "zerif_posted_on()" from parent
  */
- 
+
 function zerif_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {

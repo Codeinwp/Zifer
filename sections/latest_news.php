@@ -7,13 +7,13 @@
 global $wp_query;
 $total_posts = $wp_query->post_count;
 if ($total_posts>0) {
-		
+
 	$zerif_latestnews_background = get_theme_mod('zerif_latestnews_background',"none");
-		
+
 	echo '
 	<style type="text/css">
 		section.latest-news {
-				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_bigtitle_background.'\',sizingMethod=\'scale\');
+				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_latestnews_background.'\',sizingMethod=\'scale\');
 				background-image: url("'.$zerif_latestnews_background.'");
 		}
 	</style>';
@@ -37,7 +37,7 @@ if ($total_posts>0) {
 		if( !empty($zerif_latestnews_subtitle) ):
 			echo '<h6 class="white-text">'.__($zerif_latestnews_subtitle,'zifer-child').'</h6>';
 		endif;
-				
+
 		?>
 		</div>
 	</div>
@@ -47,11 +47,11 @@ if ($total_posts>0) {
 			<div id="homepage-latestnews" class="carousel slide" >
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-					<?php 
+					<?php
 					$args = array( 'post_type' => 'post', 'posts_per_page' => $total_posts, 'order' => 'DESC');
 					$zerif_customcategory_select = get_theme_mod('zerif_customcategory_select','');
 					$cat='';
-					
+
 					if( !empty($zerif_customcategory_select) ):
 						$args['cat']='-'.$zerif_customcategory_select;
 					endif;
@@ -62,7 +62,7 @@ if ($total_posts>0) {
 						<div class="col-sm-3 latestnews-box">
 							<div class="latestnews-img">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		
+
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail(); ?>
 								<?php else: ?>

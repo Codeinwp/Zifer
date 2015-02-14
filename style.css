@@ -365,3 +365,7 @@ article .entry-header .entry-thumbnail img.landscape {
 .entry-title:before{
 	width:0;
 }
+
+.page-header .page-title {
+	margin-bottom: 30px;
+}

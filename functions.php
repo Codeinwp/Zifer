@@ -470,3 +470,14 @@ function zerif_posted_on() {
 		$category_list
 	);
 }
+
+/**
+ *	Remove sidebars
+ */
+function zerif_remove_sidebars(){
+	unregister_sidebar( 'sidebar-ourfocus' );
+	unregister_sidebar( 'sidebar-testimonials' );
+	unregister_sidebar( 'sidebar-aboutus' );
+	unregister_sidebar( 'sidebar-ourteam' );
+}
+add_action( 'widgets_init', 'zerif_remove_sidebars', 11 );

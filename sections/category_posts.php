@@ -38,7 +38,7 @@
 				$i=0;
 				while (have_posts()) : the_post();
 					$i++;
-					echo "<a title='".get_the_title()."' href='".get_permalink()."' class='categ-block cat-block-".$i."'>
+					echo "<a title='".esc_attr(get_the_title())."' href='".esc_url(get_permalink())."' class='categ-block cat-block-".$i."'>
 						<div>";
 							?>
 							
@@ -49,7 +49,7 @@
 							<?php endif; ?>
 
 							<?php
-					echo "<div class='cat-hover'><span>".get_the_title()."</span></div>";
+					echo "<div class='cat-hover'><span>".esc_attr(get_the_title())."</span></div>";
 							
 					echo "</div></a> ";
 							

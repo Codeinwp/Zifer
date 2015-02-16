@@ -367,7 +367,7 @@ function zifer_customize_register( $wp_customize ){
 		}
 	}
 
-	$wp_customize->add_setting( 'zerif_customcategory_select' );
+	$wp_customize->add_setting( 'zerif_customcategory_select', array('sanitize_callback' => 'zerif_sanitize_text') );
 	$wp_customize->add_control( new Zerif_Category_Dropdown_Control( $wp_customize, 'zerif_customcategory_select', array(
 		'label'   => __( 'Category', 'zifer-child' ),
 		'section' => 'zerif_customcategory_section',

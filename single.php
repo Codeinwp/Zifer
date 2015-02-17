@@ -7,14 +7,17 @@
 get_header(); ?>
 <div class="clear"></div>
 </header> <!-- / END HOME SECTION  -->
-<?php $zerif_bigtitle_background = get_theme_mod('zerif_bigtitle_background',"none");
-echo '
-<style type="text/css">
-	.site-content .single-header-title{
-		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_bigtitle_background.'\',sizingMethod=\'scale\');
-		background-image: url("'.$zerif_bigtitle_background.'");
-	}
-</style>';
+<?php $zerif_bigtitle_background = get_theme_mod('zerif_bigtitle_background');
+
+if( !empty($zerif_bigtitle_background) ):
+	echo '
+	<style type="text/css">
+		.site-content .single-header-title{
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_bigtitle_background.'\',sizingMethod=\'scale\');
+			background-image: url("'.$zerif_bigtitle_background.'");
+		}
+	</style>';
+endif;	
 ?>
 <div id="content" class="site-content">
 	<div class="single-header-title">

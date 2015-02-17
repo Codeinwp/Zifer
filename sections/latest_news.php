@@ -8,15 +8,17 @@ global $wp_query;
 $total_posts = $wp_query->post_count;
 if ($total_posts>0) {
 
-	$zerif_latestnews_background = get_theme_mod('zerif_latestnews_background',"none");
+	$zerif_latestnews_background = get_theme_mod('zerif_latestnews_background');
 
-	echo '
-	<style type="text/css">
-		section.latest-news {
-				filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_latestnews_background.'\',sizingMethod=\'scale\');
-				background-image: url("'.$zerif_latestnews_background.'");
-		}
-	</style>';
+	if( !empty($zerif_latestnews_background) ):
+		echo '
+		<style type="text/css">
+			section.latest-news {
+					filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\''.$zerif_latestnews_background.'\',sizingMethod=\'scale\');
+					background-image: url("'.$zerif_latestnews_background.'");
+			}
+		</style>';
+	endif;	
 ?>
 <section class="latest-news" id="latestnews">
 

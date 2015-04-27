@@ -1,7 +1,7 @@
 /*
  Theme Name:	 Zifer Child
  Theme URI:		 https://themeisle.com/themes/zifer-child/
- Description:	 The Zifer theme is a user optimized Photography WordPress Theme built with latest technologies, easy to customize. use it to create an awesome photography portoflio
+ Description:	 Zifer Child is a user optimized Photography WordPress Theme built with latest technologies, easy to customize. Use it to create an awesome photography portfolio.
  Author: 		 ThemeIsle
  Author URI:	 https://themeisle.com
  Template:		 zerif-lite
@@ -318,13 +318,12 @@ article .entry-meta {
 }
 
 article .entry-header .entry-thumbnail{
-width: 100%;
-overflow: hidden;
-position: relative;
-/*height: 400px;*/
-vertical-align: top;
-display: inline-block;
-padding: 50% 0 0;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	padding: 50% 0 0;
 }
 
 article .entry-header .entry-thumbnail img{

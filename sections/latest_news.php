@@ -61,7 +61,11 @@ if ($total_posts>0) {
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post();
 						?>
-						<div class="col-sm-3 latestnews-box">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="col-sm-3 latestnews-box">
+						<?php else: ?>
+							<div class="col-sm-3 latestnews-box latestnews-box-no-thumbnail">
+						<?php endif; ?>
 							<div class="latestnews-img">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 

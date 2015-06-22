@@ -5,7 +5,7 @@
  Author: 		 ThemeIsle
  Author URI:	 https://themeisle.com
  Template:		 zerif-lite
- Version:		 1.0.4
+ Version:		 1.0.5
  Tags: 			 black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready,photoblogging
  Text Domain:	 zifer-child
  Domain Path:    /languages/
@@ -137,7 +137,8 @@ section.big-title .buttons .btn:first-child{
 }
 
 section.about{
-	padding-bottom: 75px;
+	padding-bottom: 60px;
+	background: #FFF;
 }
 
 .categ-block{
@@ -257,6 +258,12 @@ section.custom-category .section-content{
 	transition: opacity 0.5s linear;
 }
 
+#homepage-latestnews .latestnews-box.latestnews-box-no-thumbnail .latesnews-content{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
 #homepage-latestnews {
 	margin:20px 0 0;
 }
@@ -367,4 +374,15 @@ article .entry-header .entry-thumbnail img.landscape {
 
 .page-header .page-title {
 	margin-bottom: 30px;
+}
+
+section.custom-category {
+	background-color: #FFF;
+	padding-bottom: 50px;
+}
+
+.latesnews-content p, .latesnews-content {
+	font-size: 14px;
+	line-height: 18px;
+	color: #E0E0E0;
 }

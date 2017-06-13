@@ -460,7 +460,7 @@ function zerif_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$category_list = get_the_category_list( __( ', ', 'zifer-child' ) );
+	$category_list = get_the_category_list( ', ' );
 	print('<i class="fa fa-pencil-square-o fa"></i>');
 	printf( __( '<span class="byline"> by %2$s</span><span class="posted-on"> on %1$s</span><span class="category-of"> in %3$s</span>', 'zifer-child' ),
 		$time_string,

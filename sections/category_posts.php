@@ -15,7 +15,7 @@
 			$zerif_customcategory_title = get_theme_mod('zerif_customcategory_title',__('Custom Category','zifer-child'));
 			
 			if( !empty($zerif_customcategory_title) ):
-				echo '<h2  class="dark-text">'.__($zerif_customcategory_title,'zifer-child').'</h2>';
+				echo '<h2  class="dark-text">'. $zerif_customcategory_title .'</h2>';
 			endif;
 
 			?>

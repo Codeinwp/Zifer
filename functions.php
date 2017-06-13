@@ -247,12 +247,13 @@ function zifer_customize_register( $wp_customize ){
 
 	/* text */
 	$wp_customize->add_setting( 'zerif_bigtitle_text', array( 'sanitize_callback' => 'zerif_sanitize_text','default' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. ') );
-	$wp_customize->add_control( new Zerif_Customize_Textarea_Control( $wp_customize, 'zerif_bigtitle_text', array(
+	$wp_customize->add_control( 'zerif_bigtitle_text', array(
+		'type' => 'textarea',
 		'label'   => __( 'Text', 'zifer-child' ),
 		'section' => 'zerif_bigtitle_section',
 		'settings'   => 'zerif_bigtitle_text',
 		'priority' => 2
-	)) );
+	) );
 
 	/* blue button to BIG TITLE SECTION	*/
 
@@ -300,12 +301,13 @@ function zifer_customize_register( $wp_customize ){
 	));
 
 	$wp_customize->add_setting( 'zerif_about_text', array( 'sanitize_callback' => 'zerif_sanitize_text','default' => 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. ') );
-	$wp_customize->add_control( new Zerif_Customize_Textarea_Control( $wp_customize, 'zerif_about_text', array(
+	$wp_customize->add_control( 'zerif_about_text', array(
+		'type' => 'textarea',
 		'label'   => __( 'Text', 'zifer-child' ),
 		'section' => 'zerif_about_section',
 		'settings'   => 'zerif_about_text',
 		'priority' => 3
-	)) );
+	) );
 
 	/**************** Custom Category  SECTION	****************/
 	$wp_customize->add_section( 'zerif_customcategory_section' , array(
@@ -460,7 +462,7 @@ function zerif_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$category_list = get_the_category_list( __( ', ', 'zifer-child' ) );
+	$category_list = get_the_category_list( ', ' );
 	print('<i class="fa fa-pencil-square-o fa"></i>');
 	printf( __( '<span class="byline"> by %2$s</span><span class="posted-on"> on %1$s</span><span class="category-of"> in %3$s</span>', 'zifer-child' ),
 		$time_string,
@@ -481,3 +483,42 @@ function zerif_remove_sidebars(){
 	unregister_sidebar( 'sidebar-ourteam' );
 }
 add_action( 'widgets_init', 'zerif_remove_sidebars', 11 );
+
+/**
+ * Notice in Customize to announce the theme is not maintained anymore
+ */
+function zifer_child_customize_register( $wp_customize ) {
+	require_once get_stylesheet_directory() . '/class-ti-notify.php';
+	$wp_customize->register_section_type( 'Ti_Notify' );
+	$wp_customize->add_section(
+		new Ti_Notify(
+			$wp_customize,
+			'ti-notify',
+			array(
+				'text'     => sprintf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zifer-child' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=zerif-lite' ) . '">%s</a>', 'Zerif Lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) ),
+				'priority' => 0,
+			)
+		)
+	);
+	$wp_customize->add_setting( 'zifer-child-notify', array(
+		'sanitize_callback' => 'esc_html',
+	) );
+	$wp_customize->add_control( 'zifer-child-notify', array(
+		'label'    => __( 'Notification', 'zifer-child' ),
+		'section'  => 'ti-notify',
+		'priority' => 1,
+	) );
+}
+add_action( 'customize_register', 'zifer_child_customize_register' );
+/**
+ * Notice in admin dashboard to announce the theme is not maintained anymore
+ */
+function zifer_child_admin_notice() {
+	global $pagenow;
+	if ( is_admin() && ( 'themes.php' == $pagenow ) && isset( $_GET['activated'] ) ) {
+		echo '<div class="updated notice is-dismissible"><p>';
+		printf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zifer-child' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=zerif-lite' ) . '">%s</a>', 'Zerif Lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) );
+		echo '</p></div>';
+	}
+}
+add_action( 'admin_notices', 'zifer_child_admin_notice', 99 );

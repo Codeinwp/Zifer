@@ -29,7 +29,7 @@ if ($total_posts>0) {
 		$zerif_latestnews_title = get_theme_mod('zerif_latestnews_title');
 
 		if( !empty($zerif_latestnews_title) ):
-			echo '<h2 class="white-text">' . __($zerif_latestnews_title,'zifer-child') . '</h2>';
+			echo '<h2 class="white-text">' . $zerif_latestnews_title . '</h2>';
 		else:
 			echo '<h2 class="white-text">' . __('Latest news','zifer-child') . '</h2>';
 		endif;
@@ -37,7 +37,7 @@ if ($total_posts>0) {
 		$zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle');
 
 		if( !empty($zerif_latestnews_subtitle) ):
-			echo '<h6 class="white-text">'.__($zerif_latestnews_subtitle,'zifer-child').'</h6>';
+			echo '<h6 class="white-text">'. $zerif_latestnews_subtitle .'</h6>';
 		endif;
 
 		?>

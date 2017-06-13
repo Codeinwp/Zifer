@@ -16,7 +16,7 @@
 			$zerif_about_title = get_theme_mod('zerif_about_title',__('About','zifer-child'));
 
 			if( !empty($zerif_about_title) ):
-				echo '<h2  class="dark-text">'.__($zerif_about_title,'zifer-child').'</h2>';
+				echo '<h2  class="dark-text">' . $zerif_about_title . '</h2>';
 			endif;
 			
 			?>
@@ -29,7 +29,7 @@
 
 				if( !empty($zerif_about_text) ):
 					echo '<span  class="dark-text">';
-					echo __($zerif_about_text,'zifer-child');
+					echo $zerif_about_text;
 					echo '</span>';
 				endif;
 
